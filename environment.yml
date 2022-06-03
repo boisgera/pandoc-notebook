@@ -27,6 +27,8 @@ dependencies:
   # Document Processing 
   - beautifulsoup4
   - pandoc=2.18
+  # Shell
+  - plumbum
 
   - pip:
     # Pygame

@@ -2,10 +2,23 @@
 % myself
 % today
 
-``` {.code .python}
-import matplotlib_inline.backend_inline
 
-matplotlib_inline.backend_inline.set_matplotlib_formats("svg")
+--------------------------------------------------------------------------------
+
+```python
+import matplotlib as mpl
+print(mpl.rcParams['figure.dpi'])
+mpl.rcParams['figure.dpi'] = 300
+print(mpl.rcParams['figure.dpi'])
+mpl.rcParams['savefig.dpi'] = 300
+```
+
+``` python
+import matplotlib.pyplot as plt
+plt.plot([1, 2, 3])
+```
+
+``` python
 import matplotlib.pyplot as plt
 plt.plot([1, 2, 3])
 ```
@@ -15,7 +28,7 @@ plt.plot([1, 2, 3])
 **Lorem ipsum** dolor sit amet, consectetur adipiscing elit. Nunc luctus
 bibendum felis dictum sodales.
 
-``` code
+```
 print("hello")
 ```
 
@@ -27,9 +40,15 @@ print("hello")
 print("hello")
 ```
 
+## Result
+
+``` python
+>>> 1 + 1
+```
+
 ## Pyout
 
-``` code
+```
 from IPython.display import HTML
 HTML("""
 <script>
@@ -43,48 +62,30 @@ console.log("hello");
 
 This image ![images](images/howtoexplain.jpg) will be included as a cell attachment.
 
-If you want to add cell attributes, group cells differently, 
-or add output to code cells, 
-then you need to include divs to indicate the structure. 
-You can use either fenced divs or native divs for this. Here is an example:
+![images](images/howtoexplain.jpg)
 
-:::::: {.cell .markdown .other}
-# Lorem {.ipsum}
 
-**Lorem ipsum** dolor sit amet, consectetur adipiscing elit. Nunc luctus
-bibendum felis dictum sodales.
-::::::
+--------------------------------------------------------------------------------
 
-:::::: {.cell .code execution_count=1}
-``` {.python}
-print("hello")
+```
+1 + 1
 ```
 
-::: {.output .stream .stdout}
 ```
-hello
-```
-:::
-::::::
-
-:::::: {.cell .code execution_count=2}
-``` {.python}
-from IPython.display import HTML
-HTML("""
-<script>
-console.log("hello");
-</script>
-<b>HTML</b>
-""")
+print("Hello world!")
 ```
 
-::: {.output .execute_result execution_count=2}
-```{=html}
-<script>
-console.log("hello");
-</script>
-<b>HTML</b>
-hello
+$$
+\int_0^x f(t) \, dt
+$$
+
+sljdksjdksdj $a=1$
+
+
 ```
-:::
-::::::
+width = 345.0 / 72.27
+height = width / (16/9)
+print(width, height)
+plt.figure(figsize=(width, height))
+plt.plot([0, 2, 1, 0, 3])
+```
